@@ -1,0 +1,1 @@
+STL stand for Standard Template libraries. This are already implemented functions and classes for day to day advance data structures like array, vectors, etc.
