@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+int sumOfArr(int arr[], int size)
+{
+    if (size == 0)
+    {
+        return 0;
+    }
+    if (size == 1)
+    {
+        return *arr;
+    }
+    return *arr + sumOfArr(arr + 1, size - 1);
+}
+int main()
+{
+    int nums[5] = {1, 2, 3, 4, 5};
+    cout << sumOfArr(nums, 5) << endl;
+}
