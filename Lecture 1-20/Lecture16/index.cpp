@@ -3,11 +3,11 @@
 // Purpose: Demonstrates Lecture16 and shows the data flow through a complete example.
 // Core idea: Follow the helper functions first, then main(), which prepares input and displays the result.
 // Complexity note: Complexity depends on the loops and helper functions identified below.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <algorithm>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(int numArr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -16,11 +16,13 @@ void printArr(int numArr[], int size)
     }
     cout << endl;
 }
+// Sorts by selecting the smallest remaining value and placing it at the current front position.
 void selectionSort(int numArr[], int size)
 {
     cout << endl;
     cout << "Given array: ";
     printArr(numArr, size);
+    // Key idea: The prefix before the outer-loop index is already in final sorted order.
     for (int i = 0; i < size; i++)
     {
         int smallNumIndex = i;

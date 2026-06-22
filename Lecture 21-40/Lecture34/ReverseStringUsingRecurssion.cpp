@@ -3,12 +3,13 @@
 // Purpose: Performs the Reverse String Using Recursion string transformation or query.
 // Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
 // Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
+// Reverses the requested sequence or range by exchanging characters/elements from opposite ends.
 void reverseString(string &str, int start, int end)
 {
+    // Key idea: Move both boundaries inward after each swap so every pair is processed once.
     if (start > end)
     {
         return;
@@ -16,9 +17,11 @@ void reverseString(string &str, int start, int end)
     swap(str[start], str[end]);
     reverseString(str, start + 1, end - 1);
 }
+// Reverses the string recursively using one index; its mirror position is derived from the string length.
 void reverseStringWithSinglePointer(string &str, int start)
 {
     int end = str.length() - start - 1;
+    // Key idea: Stop after reaching the middle, because every character pair has then been swapped exactly once.
     if (start > end)
     {
         return;

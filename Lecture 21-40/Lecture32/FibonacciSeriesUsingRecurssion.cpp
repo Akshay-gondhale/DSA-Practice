@@ -3,14 +3,15 @@
 // Purpose: Generates or calculates Fibonacci Series Using Recursion.
 // Core idea: Each term is formed from the two preceding terms; recursive versions directly mirror this recurrence.
 // Complexity note: The iterative version is O(n); naive recursion is exponential and uses O(n) stack depth.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/fibonacci-number/description/
 #include <bits/stdc++.h>
 using namespace std;
 
+// Returns the nth Fibonacci value from the recurrence F(n) = F(n-1) + F(n-2).
 int getNthFibonacci(int n)
 {
+    // Key idea: The two base values stop recursion; larger values combine the previous two results.
     if (n == 0)
     {
         return 0;

@@ -3,15 +3,16 @@
 // Purpose: Explores pointers With Functions and how C++ accesses objects through addresses or aliases.
 // Core idea: Track both the stored address and the value reached by dereferencing; note when a function receives a copy versus an address/reference.
 // Complexity note: These examples emphasize memory semantics rather than algorithmic complexity.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void print(int *p)
 {
     cout << "Value of pointer in function is: " << *p << endl;
 }
 
+// Demonstrates whether changes made through this parameter are visible to the caller.
 void update(int *p)
 {
     // if we update pointer address it will not affect main.
@@ -21,6 +22,7 @@ void update(int *p)
     *p = *p + 1;
 }
 
+// Sums an array received as a pointer, illustrating that array parameters do not retain compile-time length information.
 int getSum(int *arr, int n)
 {
 

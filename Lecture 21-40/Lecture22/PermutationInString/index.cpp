@@ -1,13 +1,14 @@
 // -----------------------------------------------------------------------------
 // Learning focus: Permutation In String
 // Purpose: Checks whether a string contains a permutation of another string.
-// Core idea: Maintain character-frequency counts for a fixed-size sliding window and compare them with the target counts.
-// Complexity note: Time is O(n + alphabet size), with O(alphabet size) extra space.
-// Read the inline code and comments below to connect this idea to each step.
+// Core idea: Build a 26-letter frequency table for every candidate window and
+// compare it with the first string's frequency table.
+// Complexity: O((|s2| - |s1| + 1) * |s1|) time and O(1) alphabet space.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/permutation-in-string/description/
 #include <iostream>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(int charArr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -16,6 +17,7 @@ void printArr(int charArr[], int size)
     }
     cout << endl;
 }
+// Compares fixed-alphabet frequency tables to determine whether two windows are permutations.
 bool checkEqual(int arr1[], int arr2[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -27,6 +29,7 @@ bool checkEqual(int arr1[], int arr2[], int size)
     }
     return true;
 }
+// Checks every fixed-size window by rebuilding its frequency table.
 bool checkPermutationInSting(string s1, string s2)
 {
     if (s1.length() > s2.length())
@@ -40,7 +43,8 @@ bool checkPermutationInSting(string s1, string s2)
         allChars[increamentIndex]++;
     }
 
-    // comparing with s2
+    // Each window has the same length as s1; equal frequency tables mean the
+    // window is a permutation even when its character order differs.
     for (int i = 0; i < s2.length() - s1.length() + 1; i++)
     {
         int allChars2[26] = {0};

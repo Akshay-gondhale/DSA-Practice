@@ -3,13 +3,13 @@
 // Purpose: Solves Allocate Books with binary search on the answer.
 // Core idea: A feasibility check greedily tests a candidate limit; binary search then finds the smallest valid limit.
 // Complexity note: For n items and search range S, time is O(n log S) and extra space is O(1).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/allocate-books_1090540?source=youtube&campaign=love_babbar_codestudio2&leftPanelTabValue=PROBLEM&count=25&page=1&search=allocate%20&sort_entity=order&sort_order=ASC&customSource=studio_nav
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
+// Returns the sum of the supplied elements.
 int sumArr(vector<int> &arr, int size)
 {
     int sum = 0;
@@ -19,10 +19,12 @@ int sumArr(vector<int> &arr, int size)
     }
     return sum;
 }
+// Greedily tests whether a proposed maximum workload can satisfy the allocation constraints.
 bool isPossibleSol(vector<int> &books, int size, int students, int mid)
 {
     int sum = 0;
     int totalBlocks = 0;
+    // Key idea: Start a new student/painter when the current allocation would exceed the candidate limit.
     for (int i = 0; i < size; i++)
     {
         sum += books[i];
@@ -43,6 +45,7 @@ bool isPossibleSol(vector<int> &books, int size, int students, int mid)
     }
 }
 
+// Uses binary search on the maximum allowed workload to find the smallest feasible answer.
 int distributeBooks(vector<int> &books, int size, int students, int arrSum)
 {
     int start = 0;
@@ -61,6 +64,7 @@ int distributeBooks(vector<int> &books, int size, int students, int arrSum)
     }
     while (start <= end)
     {
+        // Choose the middle index with an overflow-safe formula before deciding which half remains relevant.
         int mid = start + (end - start) / 2;
         cout << start << "--" << mid << "--" << end << endl;
         if (isPossibleSol(books, size, students, mid))

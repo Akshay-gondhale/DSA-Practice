@@ -3,12 +3,12 @@
 // Purpose: Handles If Array Is Sorted And Rotated using modular positions or order-break counting.
 // Core idea: Rotation wraps indices around the array; sorted-rotation validation counts where ascending order breaks.
 // Complexity note: Time is O(n); extra space depends on whether a temporary result array is used.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &nums)
 {
     for (int i = 0; i < nums.size(); i++)
@@ -17,11 +17,13 @@ void printArr(vector<int> &nums)
     }
     cout << endl;
 }
+// Checks whether the array can be obtained by rotating a nondecreasing sequence.
 void checkIfArrayIsSortedAndRotated1(vector<int> &nums)
 {
     // x is to find how much array is rotated
     // initially it will be 0 considering default is sorted
     int x = 0;
+    // Key idea: A valid rotation has at most one place where the next value is smaller than the current value, including the wraparound pair.
     for (int i = 0; i < nums.size() - 1; i++)
     {
         if (nums[i] > nums[i + 1])
@@ -54,10 +56,12 @@ void checkIfArrayIsSortedAndRotated1(vector<int> &nums)
     }
     cout << isSorted << endl;
 }
+// Checks whether the array can be obtained by rotating a nondecreasing sequence.
 void checkIfArrayIsSortedAndRotated2(vector<int> &nums)
 {
 
     int count = 0;
+    // Key idea: A valid rotation has at most one place where the next value is smaller than the current value, including the wraparound pair.
     for (int i = 0; i < nums.size() - 1; i++)
     {
         if (nums[i + 1] < nums[i])

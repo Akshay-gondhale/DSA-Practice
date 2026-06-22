@@ -3,7 +3,6 @@
 // Purpose: Solves Duplicates In Array by exploiting value-frequency or XOR cancellation properties.
 // Core idea: The algorithm combines or counts values so matching occurrences cancel or become detectable.
 // Complexity note: Inspect the implementation for its input assumptions; the main traversal is typically O(n).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // Problem link:
 // https://www.naukri.com/code360/problems/duplicate-in-array_893397

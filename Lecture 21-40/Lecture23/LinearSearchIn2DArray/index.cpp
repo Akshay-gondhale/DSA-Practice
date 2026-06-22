@@ -3,13 +3,14 @@
 // Purpose: Implements Linear Search In2 DArray by checking elements one at a time.
 // Core idea: Stop when the target is found; otherwise continue until the searchable range is exhausted.
 // Complexity note: Worst-case time is O(n); iterative extra space is O(1), while recursion uses O(n) stack space.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 
+// Searches elements in traversal order and returns as soon as the target is found.
 bool linearSearch2DArray(int arr[][4], int rowSize, int elementToSearch)
 {
+    // Key idea: If the current value is not the target, continue with the remaining range.
     for (int i = 0; i < rowSize; i++)
     {
         for (int j = 0; j < 4; j++)

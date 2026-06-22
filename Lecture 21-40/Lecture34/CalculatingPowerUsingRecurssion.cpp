@@ -3,7 +3,6 @@
 // Purpose: Computes a power using Calculating Power Using Recursion and exponent decomposition.
 // Core idea: Halve the exponent, reuse the half-power, square it, and multiply once more when the exponent is odd.
 // Complexity note: Time is O(log exponent); recursive code uses O(log exponent) stack space.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
@@ -21,9 +20,11 @@ using namespace std;
 //     return num * calculatePower(num, power - 1);
 // }
 
-// optimised
+// Optimized recursive exponentiation: solve one half-sized subproblem and reuse
+// its result instead of making two identical recursive calls.
 int calculatePower(int num, int power)
 {
+    // Key idea: The base case stops recursion; each returning call contributes the current multiplication.
     if (power == 0)
     {
         return 1;

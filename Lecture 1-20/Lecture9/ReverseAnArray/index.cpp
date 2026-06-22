@@ -3,10 +3,10 @@
 // Purpose: Demonstrates Reverse An Array using in-place element swaps.
 // Core idea: Move indices from the relevant ends or neighboring positions and swap each required pair exactly once.
 // Complexity note: Time is O(n) and auxiliary space is O(1).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArray(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -15,10 +15,12 @@ void printArray(int arr[], int size)
     }
     cout << endl;
 }
+// Reverses the requested sequence or range by exchanging characters/elements from opposite ends.
 void reverseArray(int arr[], int size)
 {
     int start = 0;
     int end = size - 1;
+    // Key idea: Move both boundaries inward after each swap so every pair is processed once.
     while (start < end)
     {
         swap(arr[start], arr[end]);

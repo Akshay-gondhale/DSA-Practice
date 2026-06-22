@@ -3,12 +3,12 @@
 // Purpose: Demonstrates common C++ Standard Library operations for Algorithms.
 // Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
 // Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> numArr)
 {
     for (int i = 0; i < numArr.size(); i++)

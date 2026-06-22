@@ -3,12 +3,12 @@
 // Purpose: Solves Merge Two Sorted Array with coordinated array indices.
 // Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
 // Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/merge-sorted-array/description/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &numArr)
 {
     for (int i = 0; i < numArr.size(); i++)
@@ -18,12 +18,14 @@ void printArr(vector<int> &numArr)
     cout << endl;
 }
 
+// Merges two sorted arrays by repeatedly selecting the smaller current element.
 void mergeTwoSortedArray(vector<int> &nums1, int m, vector<int> &nums2, int n)
 {
     vector<int> mergedArray(m + n, 0);
     int i = 0; // pointer for nums1 array
     int j = 0; // pointer for nums2 array
     int k = 0; // pointer for merged array
+    // Key idea: Once one input is exhausted, append the untouched remainder of the other input.
     while (i < m && j < n && k < m + n)
     {
         if (nums1[i] < nums2[j])

@@ -3,7 +3,6 @@
 // Purpose: Demonstrates common C++ Standard Library operations for Vector.
 // Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
 // Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
@@ -11,6 +10,8 @@ using namespace std;
 // * Benefit of using vector is it is now size bounded. It expands if you push
 // * more elements in it. Each time when limit gets exhaust it doubles its length.
 
+// Prints a copy of the vector; passing by const reference would avoid that copy
+// when mutation is not required.
 void printVector(vector<int> numArr)
 {
     for (int i = 0; i < numArr.size(); i++)

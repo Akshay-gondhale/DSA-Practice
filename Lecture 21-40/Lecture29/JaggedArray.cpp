@@ -3,7 +3,6 @@
 // Purpose: Demonstrates Jagged Array and explicit dynamic-memory management.
 // Core idea: Allocate required rows/elements on the heap, access them through pointers, and release every allocation with matching delete operations.
 // Complexity note: Memory usage is proportional to the number of dynamically allocated elements.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // A jagged array (also known as an irregular or ragged array) is a multidimensional array where each individual row can have a different number of columns.
 #include <bits/stdc++.h>
@@ -15,6 +14,7 @@ int main()
     cin >> rows;
     int *colLengthForEachRow = new int[rows];
     cout << "Enter col length for each individual row: ";
+    // Key idea: Each row has its own length and allocation, so access and cleanup must use that row's recorded size.
     for (int i = 0; i < rows; i++)
     {
         cin >> colLengthForEachRow[i];

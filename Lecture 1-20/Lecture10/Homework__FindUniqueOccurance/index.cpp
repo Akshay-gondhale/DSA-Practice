@@ -3,7 +3,6 @@
 // Purpose: Solves Homework: Find Unique Occurance by exploiting value-frequency or XOR cancellation properties.
 // Core idea: The algorithm combines or counts values so matching occurrences cancel or become detectable.
 // Complexity note: Inspect the implementation for its input assumptions; the main traversal is typically O(n).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/unique-number-of-occurrences/description/
 #include <iostream>
@@ -11,6 +10,7 @@
 #include <map>
 #include <algorithm>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArray(vector<int> &arr)
 {
     for (int i = 0; i < arr.size(); i++)
@@ -34,7 +34,8 @@ int main()
     }
     // sorting array internally
     sort(numArr.begin(), numArr.end());
-    // creating map to store occurances
+    // First count each value, then compare the counts themselves: the problem
+    // requires occurrence totals to be unique, not merely the input values.
     map<int, int> numOccurance;
     for (int i = 0; i < numArr.size(); i++)
     {

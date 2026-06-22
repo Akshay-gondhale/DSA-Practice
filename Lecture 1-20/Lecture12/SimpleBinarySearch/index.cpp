@@ -3,12 +3,12 @@
 // Purpose: Solves Simple Binary Search by repeatedly narrowing a sorted search range.
 // Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
 // Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <algorithm>
 using namespace std;
 
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -17,10 +17,12 @@ void printArr(int arr[], int size)
     }
     cout << endl;
 }
+// Searches a sorted range by comparing its middle value with the target.
 int binarySearch(int arr[], int size, int key)
 {
     int start = 0;
     int end = size - 1;
+    // Key idea: Discard the half that cannot contain the key; this halves the remaining search space each step.
     while (start <= end)
     {
         // OPTIMIZATION

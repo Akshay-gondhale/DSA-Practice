@@ -3,11 +3,11 @@
 // Purpose: Demonstrates Lecture17 and shows the data flow through a complete example.
 // Core idea: Follow the helper functions first, then main(), which prepares input and displays the result.
 // Complexity note: Complexity depends on the loops and helper functions identified below.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <algorithm>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(int numArr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -16,10 +16,12 @@ void printArr(int numArr[], int size)
     }
     cout << endl;
 }
+// Sorts by repeatedly swapping adjacent out-of-order values; the recursive form then sorts a shorter prefix.
 void bubbleSort(int numArr[], int size)
 {
     cout << "Before sorting array: " << endl;
     printArr(numArr, size);
+    // Key idea: After one complete pass, the largest unsorted value is fixed at the end.
     for (int i = 0; i < size; i++)
     {
         bool isSwapped = false;

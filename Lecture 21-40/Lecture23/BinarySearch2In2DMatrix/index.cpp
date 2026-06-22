@@ -1,21 +1,22 @@
 // -----------------------------------------------------------------------------
-// Learning focus: Binary Search2 In2 DMatrix
-// Purpose: Solves Binary Search2 In2 DMatrix by repeatedly narrowing a sorted search range.
-// Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
-// Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
-// Read the inline code and comments below to connect this idea to each step.
+// Learning focus: Search In A Row-Wise And Column-Wise Sorted Matrix
+// Start at the top-right corner, where moving left decreases values and moving
+// down increases them. Time complexity: O(rows + columns) | Extra space: O(1)
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/search-a-2d-matrix-ii/
 #include <iostream>
 #include <vector>
 using namespace std;
 
+// Eliminates one complete row or column after each comparison.
 bool searchMatrix(vector<vector<int>> &matrix, int target)
 {
     int rows = matrix.size();
     int cols = matrix[0].size();
     int rowIndex = 0;
     int colIndex = cols - 1;
+    // From the top-right corner, a value below target eliminates the current
+    // row; a value above target eliminates the current column.
     while (rowIndex < rows && colIndex >= 0)
     {
         int element = matrix[rowIndex][colIndex];

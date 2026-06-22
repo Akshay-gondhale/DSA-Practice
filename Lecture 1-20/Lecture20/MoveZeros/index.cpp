@@ -3,11 +3,11 @@
 // Purpose: Solves Move Zeros with coordinated array indices.
 // Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
 // Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &numArr)
 {
     for (int i = 0; i < numArr.size(); i++)
@@ -17,10 +17,12 @@ void printArr(vector<int> &numArr)
     cout << endl;
 }
 
+// Moves zero values to the end while retaining the relative order of non-zero values.
 void moveZeros(vector<int> &nums)
 {
     int i = 0; // for nums
     int j = 0; // for zeros
+    // Key idea: Track the next zero slot and swap in each later non-zero value.
     while (i < nums.size() && j < nums.size())
     {
         if (i == j && nums[i] != 0)

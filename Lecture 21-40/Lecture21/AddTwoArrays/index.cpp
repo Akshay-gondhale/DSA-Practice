@@ -3,7 +3,6 @@
 // Purpose: Solves Add Two Arrays with coordinated array indices.
 // Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
 // Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/sum-of-two-arrays_893186?leftPanelTabValue=PROBLEM
 #include <iostream>
@@ -11,6 +10,7 @@
 #include <cmath>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &nums)
 {
     for (int i = 0; i < nums.size(); i++)
@@ -19,9 +19,11 @@ void printArr(vector<int> &nums)
     }
     cout << endl;
 }
+// Adds two digit arrays from right to left, matching normal column addition.
 void findArraySum(vector<int> &a, vector<int> &b)
 {
     int sumOfArr1 = 0;
+    // Key idea: Carry must be included in the next column and may create one final leading digit.
     for (int i = 0; i < a.size(); i++)
     {
         sumOfArr1 += pow(10, a.size() - i - 1) * a[i];

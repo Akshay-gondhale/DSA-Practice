@@ -3,13 +3,13 @@
 // Purpose: Demonstrates Reverse The Array using in-place element swaps.
 // Core idea: Move indices from the relevant ends or neighboring positions and swap each required pair exactly once.
 // Complexity note: Time is O(n) and auxiliary space is O(1).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/reverse-the-array_1262298?utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio3
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &numArr)
 {
     for (int i = 0; i < numArr.size(); i++)
@@ -18,10 +18,12 @@ void printArr(vector<int> &numArr)
     }
     cout << endl;
 }
+// Reverses the requested sequence or range by exchanging characters/elements from opposite ends.
 void reverseTheArray(vector<int> &numArr, int m)
 {
     int start = m + 1;
     int end = numArr.size() - 1;
+    // Key idea: Move both boundaries inward after each swap so every pair is processed once.
     while (start < end)
     {
         swap(numArr[start], numArr[end]);

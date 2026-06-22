@@ -3,14 +3,15 @@
 // Purpose: Performs the Get Max Occuring Char string transformation or query.
 // Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
 // Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.geeksforgeeks.org/problems/maximum-occuring-character-1587115620/1
 #include <iostream>
 using namespace std;
+// Counts character frequencies and returns the character with the largest count.
 char getMaxOccuringChar(string &s)
 {
     int charArr[26] = {0};
+    // Key idea: Convert a character to an array index so each occurrence updates its frequency in constant time.
     for (int i = 0; s[i] != '\0'; i++)
     {
         int arrIndex;

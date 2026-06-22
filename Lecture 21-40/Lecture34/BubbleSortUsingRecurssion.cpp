@@ -3,10 +3,10 @@
 // Purpose: Sorts an array with recursive bubble sort.
 // Core idea: One pass moves the largest remaining value to the end, then recursion sorts the shorter prefix.
 // Complexity note: Time is O(n^2), with O(n) recursive stack space.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(int arr[], int size)
 {
     for (int i = 0; i < size; i++)
@@ -15,8 +15,10 @@ void printArr(int arr[], int size)
     }
     cout << endl;
 }
+// Sorts by repeatedly swapping adjacent out-of-order values; the recursive form then sorts a shorter prefix.
 void bubbleSort(int arr[], int size)
 {
+    // Key idea: After one complete pass, the largest unsorted value is fixed at the end.
     if (size <= 1)
     {
         return;

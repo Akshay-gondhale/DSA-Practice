@@ -3,13 +3,13 @@
 // Purpose: Solves Painters Partition Problem with binary search on the answer.
 // Core idea: A feasibility check greedily tests a candidate limit; binary search then finds the smallest valid limit.
 // Complexity note: For n items and search range S, time is O(n log S) and extra space is O(1).
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/painter's-partition-problem_1089557?source=youtube&campaign=love_babbar_codestudio2
 #include <iostream>
 #include <vector>
 #include <algorithm>
 using namespace std;
+// Returns the sum of the supplied elements.
 int sumArr(vector<int> &arr, int size)
 {
     int sum = 0;
@@ -19,10 +19,12 @@ int sumArr(vector<int> &arr, int size)
     }
     return sum;
 }
+// Greedily tests whether a proposed maximum workload can satisfy the allocation constraints.
 bool isPossibleSol(vector<int> &paintBoards, int size, int painters, int mid)
 {
     int sum = 0;
     int totalPaintBoards = 0;
+    // Key idea: Start a new student/painter when the current allocation would exceed the candidate limit.
     for (int i = 0; i < size; i++)
     {
         sum += paintBoards[i];
@@ -47,6 +49,7 @@ bool isPossibleSol(vector<int> &paintBoards, int size, int painters, int mid)
         return false;
     }
 }
+// Uses binary search on the maximum allowed workload to find the smallest feasible answer.
 int distributePaintBoards(vector<int> &paintBoards, int size, int painters, int arrSum)
 {
     int start = 0;
@@ -66,6 +69,7 @@ int distributePaintBoards(vector<int> &paintBoards, int size, int painters, int 
 
     while (start <= end)
     {
+        // Choose the middle index with an overflow-safe formula before deciding which half remains relevant.
         int mid = start + (end - start) / 2;
         cout << "START: " << start << " MID: " << mid << " END: " << end << " IS POSSIBLE SOL: " << isPossibleSol(paintBoards, size, painters, mid) << endl;
         if (isPossibleSol(paintBoards, size, painters, mid))

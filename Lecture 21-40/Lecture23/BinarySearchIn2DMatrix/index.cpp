@@ -3,12 +3,12 @@
 // Purpose: Solves Binary Search In2 DMatrix by repeatedly narrowing a sorted search range.
 // Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
 // Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/search-a-2d-matrix/description/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Searches a sorted range by comparing its middle value with the target.
 bool binarySearch(vector<vector<int>> &matrix, int target)
 {
     int rowsNum = matrix.size();
@@ -16,7 +16,9 @@ bool binarySearch(vector<vector<int>> &matrix, int target)
     int start = 0;
     int end = rowsNum * colsNum - 1;
 
+    // Choose the middle index with an overflow-safe formula before deciding which half remains relevant.
     int mid = start + (end - start) / 2;
+    // Key idea: Discard the half that cannot contain the key; this halves the remaining search space each step.
     while (start <= end)
     {
         cout << "MID: " << mid << " || START: " << start << " || END: " << end << endl;
@@ -43,6 +45,7 @@ bool binarySearch(vector<vector<int>> &matrix, int target)
         {
             end = mid - 1;
         }
+        // Choose the middle index with an overflow-safe formula before deciding which half remains relevant.
         mid = start + (end - start) / 2;
     }
     return 0;

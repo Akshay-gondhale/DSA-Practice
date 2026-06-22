@@ -3,7 +3,6 @@
 // Purpose: Counts primes using Count Primes Segmented Sieve.
 // Core idea: Sieve methods mark multiples of each discovered prime so composite numbers are skipped efficiently.
 // Complexity note: The standard sieve runs in O(n log log n) time and O(n) space; segmented variants reduce the active range memory.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
@@ -34,6 +33,7 @@ void simpleSieve(int limit, vector<int> &prime)
     // Standard sieve
     for (int p = 2; p * p < limit; p++)
     {
+        // Key idea: Only these small primes are needed because every composite has a factor no larger than its square root.
         if (mark[p])
         {
             for (int i = p * p; i < limit; i += p)
@@ -86,6 +86,7 @@ void segmentedSieve(int n)
     // Process all segments
     while (low < n)
     {
+        // Key idea: For each base prime, begin at the first multiple inside the current segment and mark subsequent multiples.
         if (high > n)
             high = n;
 

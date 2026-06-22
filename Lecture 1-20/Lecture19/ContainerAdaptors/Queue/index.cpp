@@ -3,7 +3,6 @@
 // Purpose: Demonstrates common C++ Standard Library operations for Queue.
 // Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
 // Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // queue stores data in same sequence as they are entered. In this first element entered will go out first
 // example: any queue like queue for movie tickets

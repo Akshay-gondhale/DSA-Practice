@@ -3,7 +3,6 @@
 // Purpose: Demonstrates the C++ language feature Macros.
 // Core idea: Compare what the compiler or preprocessor supplies automatically with values and calls written explicitly by the programmer.
 // Complexity note: The focus is compile-time substitution and function-call semantics, not data-size complexity.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;

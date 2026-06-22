@@ -3,12 +3,13 @@
 // Purpose: Demonstrates Twos Power With Recursion through recursion.
 // Core idea: A base case handles the smallest input; each recursive call reduces the problem and the returning calls combine or print results.
 // Complexity note: Recursion depth and time follow the amount by which each call reduces the input.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
+// Computes a power recursively by reducing the exponent toward its base case.
 int getTwosPower(int n)
 {
+    // Key idea: The base case stops recursion; each returning call contributes the current multiplication.
     if (n <= 1)
     {
         return 2;

@@ -3,10 +3,10 @@
 // Purpose: Explores Reference Variable and how C++ accesses objects through addresses or aliases.
 // Core idea: Track both the stored address and the value reached by dereferencing; note when a function receives a copy versus an address/reference.
 // Complexity note: These examples emphasize memory semantics rather than algorithmic complexity.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
+// Demonstrates whether changes made through this parameter are visible to the caller.
 void update(int &n)
 {
     n++;

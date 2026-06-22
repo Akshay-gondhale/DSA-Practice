@@ -3,12 +3,12 @@
 // Purpose: Demonstrates Print Spiral Matrix on a two-dimensional matrix.
 // Core idea: Nested loops or moving boundaries determine the order in which rows and columns are visited.
 // Complexity note: Visiting every matrix entry takes O(rows * columns) time.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/spiral-matrix/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> numArr)
 {
     for (int i = 0; i < numArr.size(); i++)
@@ -17,6 +17,7 @@ void printArr(vector<int> numArr)
     }
     cout << endl;
 }
+// Traverses a matrix layer by layer using top, bottom, left, and right boundaries.
 vector<int> spiralOrder(vector<vector<int>> &matrix)
 {
     vector<int> output;

@@ -3,12 +3,12 @@
 // Purpose: Handles Rotate Array using modular positions or order-break counting.
 // Core idea: Rotation wraps indices around the array; sorted-rotation validation counts where ascending order breaks.
 // Complexity note: Time is O(n); extra space depends on whether a temporary result array is used.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https : // leetcode.com/problems/rotate-array/submissions/1863284025/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> &nums)
 {
     for (int i = 0; i < nums.size(); i++)
@@ -17,9 +17,11 @@ void printArr(vector<int> &nums)
     }
     cout << endl;
 }
+// Moves elements to their rotated positions while preserving every original value.
 void rotateArray(vector<int> nums, int k)
 {
     vector<int> rotatedArr(nums.size());
+    // Key idea: Modular indexing wraps positions that move beyond the last valid index back to the beginning.
     for (int i = 0; i < nums.size(); i++)
     {
         // EXPLAINATION FOR THIS LINE:

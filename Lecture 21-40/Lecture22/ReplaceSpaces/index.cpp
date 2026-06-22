@@ -3,7 +3,6 @@
 // Purpose: Performs the Replace Spaces string transformation or query.
 // Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
 // Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/replace-spaces_1172172
 // Note there are two approaches for this -
@@ -11,6 +10,7 @@
 // second modifying existing string. Below implementation is for second tough approach whos space complexity is O(1);
 #include <iostream>
 using namespace std;
+// Builds a new string where each space is replaced by the required escape text.
 string replaceSpaces(string &str)
 {
     int spacesCount = 0;

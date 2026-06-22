@@ -1,14 +1,13 @@
 // -----------------------------------------------------------------------------
 // Learning focus: Homework: Find Pivot Index
-// Purpose: Solves Homework: Find Pivot Index by repeatedly narrowing a sorted search range.
-// Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
-// Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
-// Read the inline code and comments below to connect this idea to each step.
+// Finds an index whose left-side sum equals its right-side sum.
+// Time complexity: O(n) | Extra space: O(1)
 // -----------------------------------------------------------------------------
 // https://leetcode.com/problems/find-pivot-index/description/
 #include <iostream>
 #include <vector>
 using namespace std;
+// Returns the sum of the supplied elements.
 int sumOfArr(int arr[], int start, int end)
 {
     int sum = 0;
@@ -31,6 +30,8 @@ int main()
         cin >> numArr[i];
     }
 
+    // Keep the right and left sums incrementally instead of recomputing both
+    // sides for every candidate index.
     int rightSum = sumOfArr(numArr, 0, size - 1);
     int leftSum = 0;
     for (int i = 0; i < size; i++)

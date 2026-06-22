@@ -3,7 +3,6 @@
 // Purpose: Demonstrates common C++ Standard Library operations for Priority Queue.
 // Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
 // Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // priortiy queue is basically same as normal queue and imported from same package. But here the key difference is
 // it stores value as you entered in it but while returning it will give values in ascending or descending orders.
@@ -11,6 +10,7 @@
 #include <iostream>
 #include <queue>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printMaxQueue(priority_queue<int> queueData)
 {
     int size = queueData.size();
@@ -21,6 +21,7 @@ void printMaxQueue(priority_queue<int> queueData)
     }
     cout << endl;
 }
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printMinQueue(priority_queue<int, vector<int>, greater<int>> queueData)
 {
     int size = queueData.size();

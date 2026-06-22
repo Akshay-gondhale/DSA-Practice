@@ -3,12 +3,12 @@
 // Purpose: Demonstrates Print Like AWave on a two-dimensional matrix.
 // Core idea: Nested loops or moving boundaries determine the order in which rows and columns are visited.
 // Complexity note: Visiting every matrix entry takes O(rows * columns) time.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/print-like-a-wave_893268
 #include <iostream>
 #include <vector>
 using namespace std;
+// Displays the supplied data without changing it; useful for checking the algorithm's result.
 void printArr(vector<int> numArr)
 {
     for (int i = 0; i < numArr.size(); i++)
@@ -17,9 +17,11 @@ void printArr(vector<int> numArr)
     }
     cout << endl;
 }
+// Prints matrix columns in alternating directions to form a vertical wave.
 vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
 {
     vector<int> output;
+    // Key idea: Column parity chooses top-to-bottom or bottom-to-top traversal.
     for (int i = 0; i < mCols; i++)
     {
         if (i & 1)

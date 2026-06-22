@@ -3,17 +3,18 @@
 // Purpose: Performs the Reverse Words In String string transformation or query.
 // Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
 // Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 // leetcode problem 186. Its locked needs subscription
 #include <iostream>
 #include <vector>
 using namespace std;
 
+// Reverses the requested sequence or range by exchanging characters/elements from opposite ends.
 string reversingWordsInString(string str)
 {
     vector<string> words;
     string subStr;
+    // Key idea: Move both boundaries inward after each swap so every pair is processed once.
     for (int i = 0; str[i] != '\0'; i++)
     {
         if (str[i] == ' ')

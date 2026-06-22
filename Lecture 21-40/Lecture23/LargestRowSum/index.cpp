@@ -3,7 +3,6 @@
 // Purpose: Demonstrates Largest Row Sum on a two-dimensional matrix.
 // Core idea: Nested loops or moving boundaries determine the order in which rows and columns are visited.
 // Complexity note: Visiting every matrix entry takes O(rows * columns) time.
-// Read the inline code and comments below to connect this idea to each step.
 // -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
@@ -33,6 +32,8 @@ int main()
     int largestSum = 0;
     int largestSumIndex = -1;
     cout << "Printing row wise sum: " << endl;
+    // Reset sum for every row, then retain both the largest total and the row
+    // index that produced it.
     for (int i = 0; i < 3; i++)
     {
         int sum = 0;
