@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Add Two Arrays
+// Purpose: Solves Add Two Arrays with coordinated array indices.
+// Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
+// Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/sum-of-two-arrays_893186?leftPanelTabValue=PROBLEM
 #include <iostream>
 #include <algorithm>

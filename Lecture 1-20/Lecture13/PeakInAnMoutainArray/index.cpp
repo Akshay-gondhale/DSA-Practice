@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Peak In An Moutain Array
+// Purpose: Solves Peak In An Moutain Array by repeatedly narrowing a sorted search range.
+// Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
+// Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/peak-index-in-a-mountain-array/description/
 #include <iostream>
 using namespace std;

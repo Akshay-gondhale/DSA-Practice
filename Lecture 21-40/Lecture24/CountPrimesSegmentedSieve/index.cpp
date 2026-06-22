@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Count Primes Segmented Sieve
+// Purpose: Counts primes using Count Primes Segmented Sieve.
+// Core idea: Sieve methods mark multiples of each discovered prime so composite numbers are skipped efficiently.
+// Complexity note: The standard sieve runs in O(n log log n) time and O(n) space; segmented variants reduce the active range memory.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 #include <math.h>
@@ -118,11 +125,11 @@ void segmentedSieve(int n)
             {
                 /*
                     Mapping:
-                    number j → index (j - low)
+                    number j Ã¢â€ â€™ index (j - low)
 
                     Example:
                     low = 50
-                    j = 53 → mark[3]
+                    j = 53 Ã¢â€ â€™ mark[3]
                 */
                 mark[j - low] = false;
             }

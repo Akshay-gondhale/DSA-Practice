@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: index2
+// Purpose: Solves index2 by exploiting value-frequency or XOR cancellation properties.
+// Core idea: The algorithm combines or counts values so matching occurrences cancel or become detectable.
+// Complexity note: Inspect the implementation for its input assumptions; the main traversal is typically O(n).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string/
 // ! NOTE: This approach is optimised by using "Stack". This is better than previous one. But this it can be improved more. Check index3.cpp
 #include <iostream>

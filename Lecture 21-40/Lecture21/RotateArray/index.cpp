@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Rotate Array
+// Purpose: Handles Rotate Array using modular positions or order-break counting.
+// Core idea: Rotation wraps indices around the array; sorted-rotation validation counts where ascending order breaks.
+// Complexity note: Time is O(n); extra space depends on whether a temporary result array is used.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https : // leetcode.com/problems/rotate-array/submissions/1863284025/
 #include <iostream>
 #include <vector>

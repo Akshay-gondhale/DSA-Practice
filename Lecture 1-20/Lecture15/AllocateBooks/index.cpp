@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Allocate Books
+// Purpose: Solves Allocate Books with binary search on the answer.
+// Core idea: A feasibility check greedily tests a candidate limit; binary search then finds the smallest valid limit.
+// Complexity note: For n items and search range S, time is O(n log S) and extra space is O(1).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/allocate-books_1090540?source=youtube&campaign=love_babbar_codestudio2&leftPanelTabValue=PROBLEM&count=25&page=1&search=allocate%20&sort_entity=order&sort_order=ASC&customSource=studio_nav
 #include <iostream>
 #include <vector>

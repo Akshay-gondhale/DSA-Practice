@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Double Pointers In Functions
+// Purpose: Explores Double Pointers In Functions and how C++ accesses objects through addresses or aliases.
+// Core idea: Track both the stored address and the value reached by dereferencing; note when a function receives a copy versus an address/reference.
+// Complexity note: These examples emphasize memory semantics rather than algorithmic complexity.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
 void testingPointers(int **p)

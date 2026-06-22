@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Switch Statement
+// Purpose: Introduces the C++ fundamentals used in Switch Statement.
+// Core idea: Read execution from top to bottom and observe how declarations, conditions, loops, and output statements change program flow.
+// Complexity note: This is a language-feature demonstration; complexity is secondary to control flow.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // a simple calculator with switch statement
 
 #include <iostream>

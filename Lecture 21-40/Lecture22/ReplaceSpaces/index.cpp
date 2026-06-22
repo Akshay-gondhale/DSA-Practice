@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Replace Spaces
+// Purpose: Performs the Replace Spaces string transformation or query.
+// Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
+// Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/replace-spaces_1172172
 // Note there are two approaches for this -
 // one is simply creating another string which have space complexity O(n)

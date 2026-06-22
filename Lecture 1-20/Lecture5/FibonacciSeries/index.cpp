@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Fibonacci Series
+// Purpose: Generates or calculates Fibonacci Series.
+// Core idea: Each term is formed from the two preceding terms; recursive versions directly mirror this recurrence.
+// Complexity note: The iterative version is O(n); naive recursion is exponential and uses O(n) stack depth.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Homework: Find Unique Occurance
+// Purpose: Solves Homework: Find Unique Occurance by exploiting value-frequency or XOR cancellation properties.
+// Core idea: The algorithm combines or counts values so matching occurrences cancel or become detectable.
+// Complexity note: Inspect the implementation for its input assumptions; the main traversal is typically O(n).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/unique-number-of-occurrences/description/
 #include <iostream>
 #include <vector>

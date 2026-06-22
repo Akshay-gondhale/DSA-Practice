@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: If Array Is Sorted And Rotated
+// Purpose: Handles If Array Is Sorted And Rotated using modular positions or order-break counting.
+// Core idea: Rotation wraps indices around the array; sorted-rotation validation counts where ascending order breaks.
+// Complexity note: Time is O(n); extra space depends on whether a temporary result array is used.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/
 #include <iostream>
 #include <vector>

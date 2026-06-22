@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: index3
+// Purpose: Checks whether a string contains a permutation of another string.
+// Core idea: Maintain character-frequency counts for a fixed-size sliding window and compare them with the target counts.
+// Complexity note: Time is O(n + alphabet size), with O(alphabet size) extra space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/permutation-in-string/description/
 // * NOTE: This is the most optimised approach on leetcode.
 #include <iostream>

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Alternate Swap
+// Purpose: Demonstrates Alternate Swap using in-place element swaps.
+// Core idea: Move indices from the relevant ends or neighboring positions and swap each required pair exactly once.
+// Complexity note: Time is O(n) and auxiliary space is O(1).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // alternate elements in array will be swaped
 // eg:
 // input: [1,2,3,4,5,6]

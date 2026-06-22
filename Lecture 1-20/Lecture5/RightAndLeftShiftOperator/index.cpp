@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Right And Left Shift Operator
+// Purpose: Demonstrates Right And Left Shift Operator using place values or bitwise operations.
+// Core idea: Process one digit or bit at a time, updating the accumulated result and moving to the next place.
+// Complexity note: Time is proportional to the number of digits/bits; extra space is O(1).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // Right and left shift operators are used to shift bits left and right by given number
 // variable >> 2  ==> so this will shift bit by right
 #include <iostream>

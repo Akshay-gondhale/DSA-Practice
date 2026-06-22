@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Linear Search In2 DArray
+// Purpose: Implements Linear Search In2 DArray by checking elements one at a time.
+// Core idea: Stop when the target is found; otherwise continue until the searchable range is exhausted.
+// Complexity note: Worst-case time is O(n); iterative extra space is O(1), while recursion uses O(n) stack space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Algorithms
+// Purpose: Demonstrates common C++ Standard Library operations for Algorithms.
+// Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
+// Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 #include <algorithm>

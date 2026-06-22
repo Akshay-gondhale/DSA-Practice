@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Valid Palindromee
+// Purpose: Checks Valid Palindromee by comparing characters from opposite ends.
+// Core idea: Advance inward while corresponding normalized characters match; any mismatch disproves the palindrome.
+// Complexity note: Time is O(n); iterative code uses O(1) extra space and recursion uses O(n) stack space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https : // leetcode.com/problems/valid-palindrome/description/
 #include <iostream>
 #include <string>

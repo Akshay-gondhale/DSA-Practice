@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: First And Last Position
+// Purpose: Solves First And Last Position by repeatedly narrowing a sorted search range.
+// Core idea: Compare the middle element with the required condition and discard the half that cannot contain the answer.
+// Complexity note: Binary search takes O(log n) time and O(1) iterative extra space; recursive variants use O(log n) stack space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/first-and-last-position-of-an-element-in-sorted-array_1082549?source=youtube&campaign=love_babbar_codestudio2&utm_source=youtube&utm_medium=affiliate&utm_campaign=love_babbar_codestudio2
 #include <iostream>
 using namespace std;

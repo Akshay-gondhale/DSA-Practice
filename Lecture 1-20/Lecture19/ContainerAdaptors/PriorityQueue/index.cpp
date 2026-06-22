@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Priority Queue
+// Purpose: Demonstrates common C++ Standard Library operations for Priority Queue.
+// Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
+// Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // priortiy queue is basically same as normal queue and imported from same package. But here the key difference is
 // it stores value as you entered in it but while returning it will give values in ascending or descending orders.
 

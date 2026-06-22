@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Map
+// Purpose: Demonstrates common C++ Standard Library operations for Map.
+// Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
+// Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // maps are basically dictionary and object.
 // in cpp there are two types of map --> ordered map and unordered map.
 // int this we will see ordered map

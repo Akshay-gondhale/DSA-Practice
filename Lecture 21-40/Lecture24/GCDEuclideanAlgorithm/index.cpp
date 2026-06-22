@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: GCDEuclidean Algorithm
+// Purpose: Computes the greatest common divisor with Euclid's algorithm.
+// Core idea: Repeatedly replace the larger problem with the remainder problem because gcd(a, b) equals gcd(b, a mod b).
+// Complexity note: Time is O(log(min(a, b))) and iterative extra space is O(1).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
 

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Count Primes
+// Purpose: Counts primes using Count Primes.
+// Core idea: Sieve methods mark multiples of each discovered prime so composite numbers are skipped efficiently.
+// Complexity note: The standard sieve runs in O(n log log n) time and O(n) space; segmented variants reduce the active range memory.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/count-primes/submissions/1988670480/
 #include <iostream>
 #include <vector>

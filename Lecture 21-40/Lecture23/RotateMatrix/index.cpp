@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Rotate Matrix
+// Purpose: Demonstrates Rotate Matrix on a two-dimensional matrix.
+// Core idea: Nested loops or moving boundaries determine the order in which rows and columns are visited.
+// Complexity note: Visiting every matrix entry takes O(rows * columns) time.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/rotate-image/description/
 #include <iostream>
 #include <vector>

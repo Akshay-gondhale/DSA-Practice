@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Move Zeros
+// Purpose: Solves Move Zeros with coordinated array indices.
+// Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
+// Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 #include <vector>
 using namespace std;

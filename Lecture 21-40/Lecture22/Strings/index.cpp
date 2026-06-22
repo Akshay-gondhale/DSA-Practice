@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Strings
+// Purpose: Performs the Strings string transformation or query.
+// Core idea: Indices identify characters or word boundaries while the algorithm updates, counts, or reverses the relevant range.
+// Complexity note: The main scan is linear in the string length unless repeated searching or erasing causes additional work.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 int getLength(char *name)

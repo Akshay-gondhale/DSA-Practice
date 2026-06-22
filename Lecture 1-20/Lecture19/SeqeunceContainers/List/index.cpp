@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: List
+// Purpose: Demonstrates common C++ Standard Library operations for List.
+// Core idea: Observe construction, insertion, access, removal, size queries, and the ordering guarantees provided by the selected container.
+// Complexity note: Operation costs vary by container; the example highlights the interface and resulting element order.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // list have two pointers one in front and one in last.
 // you cannot do .at() in list.
 #include <iostream>

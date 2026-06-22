@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Print Like AWave
+// Purpose: Demonstrates Print Like AWave on a two-dimensional matrix.
+// Core idea: Nested loops or moving boundaries determine the order in which rows and columns are visited.
+// Complexity note: Visiting every matrix entry takes O(rows * columns) time.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/print-like-a-wave_893268
 #include <iostream>
 #include <vector>

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Factorial With Recursion
+// Purpose: Calculates factorial recursively.
+// Core idea: The base case stops at 0 or 1; each larger call multiplies its value by the result of the smaller subproblem.
+// Complexity note: Time and recursive stack space are both O(n).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
 int factorial(int num)

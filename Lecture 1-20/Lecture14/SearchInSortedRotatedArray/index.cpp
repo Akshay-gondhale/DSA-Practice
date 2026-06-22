@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Search In Sorted Rotated Array
+// Purpose: Demonstrates Search In Sorted Rotated Array and shows the data flow through a complete example.
+// Core idea: Follow the helper functions first, then main(), which prepares input and displays the result.
+// Complexity note: Complexity depends on the loops and helper functions identified below.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://www.naukri.com/code360/problems/search-in-rotated-sorted-array_1082554?source=youtube&campaign=love_babbar_codestudio2
 #include <iostream>
 using namespace std;

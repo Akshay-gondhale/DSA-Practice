@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: 231: Power Of Two
+// Purpose: Demonstrates 231: Power Of Two using place values or bitwise operations.
+// Core idea: Process one digit or bit at a time, updating the accumulated result and moving to the next place.
+// Complexity note: Time is proportional to the number of digits/bits; extra space is O(1).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/power-of-two/submissions/1791445319/
 #include <iostream>
 #include <math.h>

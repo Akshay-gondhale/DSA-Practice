@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Lecture25
+// Purpose: Demonstrates Lecture25 and shows the data flow through a complete example.
+// Core idea: Follow the helper functions first, then main(), which prepares input and displays the result.
+// Complexity note: Complexity depends on the loops and helper functions identified below.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 int main()

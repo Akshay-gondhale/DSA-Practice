@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Merge Two Sorted Array
+// Purpose: Solves Merge Two Sorted Array with coordinated array indices.
+// Core idea: Each index tracks a distinct role, such as the next input value, output position, carry, or non-zero slot.
+// Complexity note: The arrays are processed linearly, giving O(n + m) time for two inputs.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // https://leetcode.com/problems/merge-sorted-array/description/
 #include <iostream>
 #include <vector>

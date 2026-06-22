@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Prime Number
+// Purpose: Checks whether an input number is prime.
+// Core idea: Test possible divisors and reject the number as soon as an exact divisor is found.
+// Complexity note: The shown loop determines whether this is O(n) or the optimized O(sqrt(n)) approach.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <iostream>
 using namespace std;
 

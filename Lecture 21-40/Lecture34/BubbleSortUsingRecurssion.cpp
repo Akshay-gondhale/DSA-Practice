@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Bubble Sort Using Recursion
+// Purpose: Sorts an array with recursive bubble sort.
+// Core idea: One pass moves the largest remaining value to the end, then recursion sorts the shorter prefix.
+// Complexity note: Time is O(n^2), with O(n) recursive stack space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 #include <bits/stdc++.h>
 using namespace std;
 void printArr(int arr[], int size)

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: index2
+// Purpose: Checks whether a string contains a permutation of another string.
+// Core idea: Maintain character-frequency counts for a fixed-size sliding window and compare them with the target counts.
+// Complexity note: Time is O(n + alphabet size), with O(alphabet size) extra space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // this is implementing solution using map
 // ! NOTE: surprisingly this works slower than other method. other method is fast because of fixed size of array as 26
 #include <iostream>

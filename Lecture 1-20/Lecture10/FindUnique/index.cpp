@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Find Unique
+// Purpose: Solves Find Unique by exploiting value-frequency or XOR cancellation properties.
+// Core idea: The algorithm combines or counts values so matching occurrences cancel or become detectable.
+// Complexity note: Inspect the implementation for its input assumptions; the main traversal is typically O(n).
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // to find unique element in array
 // https://www.naukri.com/code360/problems/find-unique_625159
 #include <iostream>

@@ -1,3 +1,10 @@
+// -----------------------------------------------------------------------------
+// Learning focus: Pattern7
+// Purpose: Prints the Pattern7 console pattern using nested loops.
+// Core idea: The outer loop selects a row; inner loops calculate that row's spaces, symbols, letters, or numbers.
+// Complexity note: For an n-by-n style pattern, time is O(n^2); only loop counters use extra space.
+// Read the inline code and comments below to connect this idea to each step.
+// -----------------------------------------------------------------------------
 // 1
 // 22
 // 333
