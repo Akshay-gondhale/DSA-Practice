@@ -80,7 +80,6 @@ void printLL(Node *head)
     Node *pointer = head;
     while (pointer != NULL)
     {
-        cout << pointer->prev << " | " << pointer << ":" << pointer->data << " | " << pointer->next << endl;
         pointer = pointer->next;
     }
     cout << endl;
@@ -113,7 +112,6 @@ Node *removeDuplicates(Node *head)
     {
         if (prev != NULL && prev->data == pointer->data)
         {
-            Node *temp = pointer;
             pointer = pointer->next;
 
             //? Maintain the backward connection of the next node after skipping the duplicate.
